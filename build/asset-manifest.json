@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ff217a89.css",
+    "main.js": "/static/js/main.2976f2e1.js",
+    "static/js/453.fcc684e2.chunk.js": "/static/js/453.fcc684e2.chunk.js",
+    "static/media/standard-book-webfont.woff2": "/static/media/standard-book-webfont.ab1a429cad6129ea705e.woff2",
+    "static/media/standard-bold-webfont.woff2": "/static/media/standard-bold-webfont.d8bba96555c0993fa9ee.woff2",
+    "index.html": "/index.html",
+    "main.ff217a89.css.map": "/static/css/main.ff217a89.css.map",
+    "main.2976f2e1.js.map": "/static/js/main.2976f2e1.js.map",
+    "453.fcc684e2.chunk.js.map": "/static/js/453.fcc684e2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ff217a89.css",
+    "static/js/main.2976f2e1.js"
+  ]
+}

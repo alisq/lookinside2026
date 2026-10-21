@@ -82,8 +82,8 @@ function App() {
   return (
     <>
       <header>
-        <h1 className="site-title">OCADU GRAPHIC DESIGN: LOOK INSIDE</h1>
-        <p className="site-date">OCTOBER 24, 2026</p>
+        <h1 className="site-title">OCADU Graphic Design: </h1>
+        <p className="site-date">Look Inside 2026</p>
         <nav id="menu-classes" aria-label="Filter projects">
           <button
             type="button"
@@ -92,13 +92,7 @@ function App() {
           >
             <strong>See all</strong>
           </button>
-          <button
-            type="button"
-            className={`filter-button${filter === "faculty" ? " active" : ""}`}
-            onClick={() => setFilter("faculty")}
-          >
-            <strong>Faculty profiles</strong>
-          </button>
+          
           {courses.map((course) => (
             <button
               type="button"
@@ -118,19 +112,31 @@ function App() {
         {!loading && !error && visibleProjects.length === 0 ? (
           <p className="status">No projects in this group.</p>
         ) : null}
-        {visibleProjects.map((project) => (
-          <button
-            type="button"
-            key={project.id}
-            className="project-teaser"
-            onClick={(event) => openProject(project, event)}
-          >
-            {project.teaserImage ? (
-              <img src={project.teaserImage} alt="" loading="lazy" />
-            ) : null}
-            <h2>{project.title}</h2>
-          </button>
-        ))}
+        {projects.map((project) => {
+          const visible = projectMatchesFilter(project, filter);
+          return (
+            <div
+              key={project.id}
+              className={`teaser-slot${visible ? "" : " is-closed"}`}
+              aria-hidden={visible ? undefined : true}
+            >
+              <button
+                type="button"
+                className="project-teaser"
+                tabIndex={visible ? undefined : -1}
+                onClick={(event) => {
+                  if (!visible) return;
+                  openProject(project, event);
+                }}
+              >
+                {project.teaserImage ? (
+                  <img src={project.teaserImage} alt="" loading="lazy" />
+                ) : null}
+                <h2>{project.title}</h2>
+              </button>
+            </div>
+          );
+        })}
       </main>
 
       {selected ? (

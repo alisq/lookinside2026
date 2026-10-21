@@ -30,8 +30,8 @@ body,
 
 body {
   font-family: "standard", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background: black;
-  color: white;
+  background: white;
+  color: black;
 }
 
 body.overlay-open {

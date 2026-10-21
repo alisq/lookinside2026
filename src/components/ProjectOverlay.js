@@ -38,7 +38,7 @@ export default function ProjectOverlay({ project, closing, onClose }) {
           onClose();
         }}
       >
-        &times;
+        <span>&times;</span>
       </button>
       <div className="interior" onClick={(event) => event.stopPropagation()}>
         {project.isFaculty ? (

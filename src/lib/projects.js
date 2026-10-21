@@ -1,4 +1,4 @@
-const MEDIA_HOST = "https://lookinside.ocadu.gd";
+const MEDIA_HOST = "https://lookinside.iamasq.works";
 
 export const PROJECTS_URL = `${MEDIA_HOST}/json/projects`;
 
